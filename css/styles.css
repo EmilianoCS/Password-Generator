@@ -1,0 +1,212 @@
+@font-face{
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+*::selection{
+    background: #33257e;
+    color: #ffffff;
+}
+
+body{
+    background: #212139;
+    color: #ffffff;
+}
+
+.container{
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.app .row{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .column{
+    width: 50%;
+}
+
+.app label{
+    line-height: 40px;
+}
+
+.app input{
+    text-align: center;
+    border: none;
+}
+
+.app button{
+    width: 100%;
+    background: #684bff;
+    color: #ffffff;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app button:hover{
+    background: #b4a5ff;
+}
+
+.app .button.false{
+    background: #33257e;
+}
+
+.app .number_characters .buttons div{
+    width: 100%;
+}
+
+.app .number_characters .buttons div:nth-child(1) button{
+    border-radius: 4px 0 0 4px;
+}
+
+.app .number_characters input{
+    height: 40px;
+    width: 100%;
+    cursor: default;
+    background: #33257e;
+    color: #ffffff;
+}
+
+.app .number_characters .buttons div:nth-child(3) button{
+    border-radius: 0 4px 4px 0;
+}
+
+.app .number_characters .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .row.generate{
+    margin-bottom: 10px;
+}
+
+.app .row.generate .column:nth-child(1){
+    width: 30%;
+}
+
+.app .row.generate .column:nth-child(2){
+    width: 65%;
+}
+
+.app .row.generate .button.button_generate{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+}
+
+.app .row.generate .button.button_generate i{
+    margin-left: 20px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+}
+
+.app .row.generate .button.button_generate::after{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+    right: -7px;
+    background: #684bff;
+    transition: all .3s ease;
+}
+
+.app .row.generate .column:nth-child(1):hover .button.button_generate:after{
+    background: #b4a5ff;
+}
+
+.app .row.generate .input_password{
+    width: 100%;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .row.generate .input_password:hover{
+    border: 1px solid rgba(255, 255, 255, .50);
+}
+
+.app .row.generate input::selection{
+    background: #212139;
+}
+
+.app .row.alert{
+    justify-content: flex-end;
+}
+
+.app .row.alert .column{
+    width: 65%;
+}
+
+.app .row.alert .alert_copied{
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    transition: all .3s ease;
+}
+
+.app .row.alert .alert_copied.active{
+    color: rgba(255, 255, 255, 1);
+}
+
+.app .row.alert .alert_copied p, .app .row.alert .alert_copied i{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 500px){
+    .app .row{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .app .row .column{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .app .row.generate{
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        padding-top: 40px;
+    }
+
+    .app .row.generate .column:nth-child(1), .app .row.generate .column:nth-child(2){
+        width: 100%;
+    }
+
+    .app .row.generate .button.button_generate::after{
+        top: auto;
+        left: 50%;
+        right: 50%;
+        bottom: -7px;
+    }
+}

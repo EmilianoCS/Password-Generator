@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="icons/fontawesome/css/all.min.css">
+    <link rel="icon" type="image/png" href="icons/clave.jpg" />
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="app" id="app">
+            <div class="row number_characters">
+                <div class="column">
+                    <label for="number_characters">Number of characters</label>
+                </div>
+                <div class="column buttons">
+                    <div>
+                        <button class="button" id="button_minus_one"><i class="fas fa-minus"></i></button>
+                    </div>
+                    <div>
+                        <input type="text" id="number_characters" readonly value="12">
+                    </div>
+                    <div>
+                        <button class="button" id="button_plus_one"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row symbols">
+                <div class="column">
+                    <label for="symbols">Symbols</label>
+                </div>
+                <div class="column">
+                    <button class="button" id="button_symbols"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+            <div class="row numbers">
+                <div class="column">
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div class="column">
+                    <button class="button" id="button_numbers"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+            <div class="row capital_letters">
+                <div class="column">
+                    <label for="capital_letters">Capital letters</label>
+                </div>
+                <div class="column">
+                    <button class="button" id="button_capital_letters"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+            <div class="row generate">
+                <div class="column">
+                    <button class="button button_generate" id="button_generate">Generate <i
+                            class="fas fa-lock"></i></button>
+                </div>
+                <div class="column">
+                    <input type="text" class="input_password" id="input_password" readonly>
+                </div>
+            </div>
+            <div class="row alert">
+                <div class="column">
+                    <div class="alert_copied" id="alert_copied">
+                        <p><i class="fas fa-copy"></i> Copied text</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="javascript/code_javascript.js"></script>
+</body>
+
+</html>
